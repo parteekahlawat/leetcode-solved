@@ -1,7 +1,6 @@
 class Solution {
 public:
     vector<vector<int>> generate(int n) {
-        // vector
         vector<vector<int>> dp;
         if(n==1){
             vector<int> temp;
