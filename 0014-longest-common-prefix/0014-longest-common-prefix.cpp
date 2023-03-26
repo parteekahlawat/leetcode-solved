@@ -5,11 +5,9 @@ public:
         if(s.size()==1){
             return s[0];
         }
-        int mn=INT_MAX;
+        int mn=200;
         for(int i=0;i<s.size();i++){
-            int tmp=0;
-            tmp = s[i].size();
-            mn = min(tmp, mn);
+            mn = min(int(s[i].size()), mn);
         }
         int i=0;
         while(i<mn){
