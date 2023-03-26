@@ -16,7 +16,7 @@ public:
                     return false;
             }
         }
-        if(st.empty()==true)
+        if(st.empty() == true)
             return true;
         else
             return false;
