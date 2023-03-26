@@ -17,8 +17,7 @@ public:
                 }
                 if(j==s.size()-2){
                     ans+=string(1, s[0][i]);
-                }
-                
+                }   
             }
             i++;
         }
