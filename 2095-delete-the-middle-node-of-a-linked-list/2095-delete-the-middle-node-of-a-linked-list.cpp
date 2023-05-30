@@ -10,37 +10,32 @@
  */
 class Solution {
 public:
-    ListNode* deleteMiddle(ListNode* head) {
-        ListNode *temp = head;
-        int ttl=0;
-        while(temp !=NULL){
-            temp = temp->next;
-            ttl++;
-        }
-        if(ttl==1){
-            return NULL;
-        }
-        int rmv;
-        if(ttl%2==0){
-            rmv = ttl/2 +1;
-        }
-        else{
-            rmv = (ttl+1)/2;
-        }
-        int k = rmv;
-        int cnt = 1;
-   ListNode *tmp = head;
-    if(k==1){
-        // head = head->next;
-        return head;
-    }
-
-    while(cnt!=k-1){
-        cnt++;
-        tmp = tmp->next;
-    }
-    tmp->next = tmp->next->next;
+struct ListNode* deleteMiddle(struct ListNode* head) {
+    struct ListNode* index = head;
+    int count = 0;
     
-    return head;
+    while (index != NULL) {
+        count++;
+        index = index->next;
     }
+    
+    if (count % 2 == 0) {
+        count = count / 2;
+    } else {
+        count = count - 1;
+        count = count / 2;
+    }
+    
+    if(count==0){
+        return NULL;
+    }
+    ListNode* ans = head;
+    count--;
+    while(count){
+        count--;
+        ans = ans->next;
+    }
+    ans->next = ans->next->next;
+    return head;
+}
 };
