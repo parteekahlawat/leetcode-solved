@@ -28,7 +28,6 @@ public:
         }
         int val = bnry_srch(nums, target);
         int a = val, b = val;
-        cout<<val;
         while(a>0 && nums[a-1]==nums[val]){
             a--;
         }
