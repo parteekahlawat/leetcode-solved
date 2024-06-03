@@ -11,10 +11,9 @@ public:
             }
             else{
                 i++;
-                ans = max(tmp, ans);
             }
         }
-        ans = max(tmp, ans);
-        return (t.size()-ans);
+        // ans = max(tmp, ans);
+        return (t.size()-tmp);
     }
 };
